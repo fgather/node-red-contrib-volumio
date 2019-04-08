@@ -22,6 +22,7 @@ function VolumioWebsocket(host, port){
         "playPlaylist":  {pushEvent : "pushQueue", data : function(value){return  { "name": value }; }}, //playlist name
         "playFavourites": {pushEvent : "pushQueue"},
         "addToQueue": {pushEvent : "pushState", data : function(value){return  { "uri": value }; }},
+		"replaceAndPlay": {pushEvent : "pushState", data : function(value){return  { "uri": value }; }},
         "getState": {pushEvent : "pushState"},
         "getBrowseSources": {pushEvent : "pushBrowseSources"},
         "browseLibrary": {pushEvent : "pushBrowseLibrary"},
